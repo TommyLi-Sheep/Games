@@ -1,2 +1,2 @@
-# Self-made Games
-A collection of self-made games
+# Games
+A collection of self-made and classical games
