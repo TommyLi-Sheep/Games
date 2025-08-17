@@ -239,12 +239,19 @@ def auto(black_pos,white_pos,empty_pos,Win,Black_Turn,White_Turn):
     return True
 
 # Select Game Mode
-Mode = int(input('Please select game mode: 1. pvp; 2. pvc (default: Black), 3. auto. Type the number:'))
-if Mode == 1:
-    Win = pvp(black_pos,white_pos,empty_pos,Win,Black_Turn,White_Turn)
-elif Mode == 2:
-    Win = pvc(black_pos,white_pos,empty_pos,Win,Black_Turn,White_Turn)
-else: Win = auto(black_pos,white_pos,empty_pos,Win,Black_Turn,White_Turn)
+Mode_Selected = False
+while Mode_Selected = False:
+    Mode = int(input('Please select game mode: 1. pvp; 2. pvc (default: Black), 3. auto. Type the number:'))
+    if Mode == 1:
+        Win = pvp(black_pos,white_pos,empty_pos,Win,Black_Turn,White_Turn)
+        Mode_Selected = True
+    elif Mode == 2:
+        Win = pvc(black_pos,white_pos,empty_pos,Win,Black_Turn,White_Turn)
+        Mode_Selected = True
+    elif Mode == 3: 
+        Win = auto(black_pos,white_pos,empty_pos,Win,Black_Turn,White_Turn)
+        Mode_Selected = True
+    else: print('Please select a number among 1, 2 and 3.')
 
 # display victory
 if Win == True:
